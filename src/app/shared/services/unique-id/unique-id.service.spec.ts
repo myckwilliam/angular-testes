@@ -16,6 +16,6 @@ describe(UniqueIdService.name, () => {
 
   it(`${UniqueIdService.prototype.generateUniqueIdWithPrefix.name} should generate id when prefix is passed as argument`, () => {
     const id = service.generateUniqueIdWithPrefix('coiso');
-    expect(id).toContain(`coiso-`);
+    expect(id.startsWith('coiso-')).toBe(true);
   });
 });
