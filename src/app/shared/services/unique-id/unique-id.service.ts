@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { uuid } from 'uuidv4';
+import { v4 } from 'uuid';
 
 @Injectable({
   providedIn: 'root',
@@ -22,6 +22,6 @@ export class UniqueIdService {
     return this.numberOfGeneratedIds;
   }
   private generateUniqueId(): string {
-    return uuid();
+    return v4();
   }
 }
